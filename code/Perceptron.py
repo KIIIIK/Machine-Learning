@@ -101,9 +101,14 @@ class Perceptron():
 
 
 clf = Perceptron()
+## 开始训练
 clf.train(X_train, y_train)
+## 进行预测
 y_pre = clf.predict(X_test)
+## 计算准确率
 acc = accuracy_score(y_test, y_pre.reshape(-1))
+## 获取w参数
 clf.get_coef()
+## 获取截距项b
 clf.get_intercept()
 
